@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('fecha_inicio');
             $table->string('fecha_fin');
 
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('client_id')->nullable();;
             $table->foreign('client_id')
             ->references('id')
             ->on('clients')
