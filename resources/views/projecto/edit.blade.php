@@ -10,42 +10,44 @@
     
 </body>
 <center>
+    <h1>Actualizacion</h1>
 
-<form action="{{ route('client.update', $client) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('project.update', $project) }}" method="POST" enctype="multipart/form-data">
 
     @csrf
     @method('put')
     <label>
         codigo
         <br>
-        <input type="text" name="codigo" value="{{ old('codigo', $client->codigo) }}">
+        <input type="text" name="codigo" value="{{ old('codigo', $project->codigo) }}">
     </label>
     <br>
     <label>
-        numero social
+        cuantia
         <br>
-        <input type="text" name="num_social" value="{{ old('num_social', $client->num_social) }}">
+        <input type="number" name="cuantia" value="{{ old('cuantia', $project->cuantia) }}">
     </label>
     <br>
     <label>
-        titulo
+        descripcion
         <br>
-        <input type="text" name="telefono" value="{{ old('telefono', $client->telefono) }}">
+        <input type="text" name="descripcion" style="height: 100px" value="{{ old('descripcion', $project->descripcion) }}">
+    </label>
+    <br><br>
+    <label>
+        fecha inicio
+        <br>
+        <input type="date" name="fecha_inicio" value="{{ old('fecha_inicio', $project->fecha_inicio) }}">
     </label>
     <br>
     <label>
-        domicilio
+        fecha fin
         <br>
-        <input type="editorial" name="domicilio" value="{{ old('domicilio', $client->domicilio) }}">
+        <input type="date" name="fecha_fin" value="{{ old('fecha_fin', $project->fecha_fin) }}">
     </label>
     <br>
-        
-
-    
-
-
     <br>
-
+    <br>
     <button type="submit">Enviar Formulario:</button>
 </form>
 
