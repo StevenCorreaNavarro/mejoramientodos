@@ -15,7 +15,7 @@ class Payment extends Model
 
     public function typePayments()
     {
-        return $this -> hasMany('app\models\TypePayment');
+        return $this -> belongsTo('app\models\TypePayment');
     }
 }
 
